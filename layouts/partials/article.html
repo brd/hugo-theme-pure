@@ -14,8 +14,10 @@
         {{- partial "post/category.html" . }}
         {{- partial "post/tag.html" . }}
         {{- partial "post/pv.html" . }}
+        {{- if and (.Site.Params.comment) (.Site.Params.comment.enabled)}}
         <span class="post-comment"><i class="icon icon-comment"></i>&nbsp;<a href="{{ .RelPermalink }}#comments"
             class="article-comment-link">{{T "article_comments" }}</a></span>
+        {{- end }}
         {{- partial "post/wc.html" . }}
       </div>
     </div>
