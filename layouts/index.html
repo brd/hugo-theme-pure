@@ -23,6 +23,8 @@
       {{ else if .Summary }}
       <div class="article-entry text-muted" itemprop="description">
         {{ .Summary }}
+	<br>
+	<a href="{{- .RelPermalink }}">Continue Reading --></a>
       </div>
       {{- end }}
       <p class="article-meta">
